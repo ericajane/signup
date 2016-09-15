@@ -73,10 +73,8 @@ EMAIL_RE  = re.compile(r'^[\S]+@[\S]+\.[\S]+$')
 def valid_email(email):
     return not email or EMAIL_RE.match(email)
 
-#escapes if user types html
+
 class MainHandler(webapp2.RequestHandler):
-    def escape_html(self, s):
-        return.cgi.escape(s, quote=True)
 
 #defines write_form so it can be called
     def write_form(self, username="", error_username="", password="", error_password="", verify="", error_verify="", email="", error_email=""):
